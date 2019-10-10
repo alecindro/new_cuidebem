@@ -1,0 +1,44 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "br.com.cdbem",
+      "nativeLanguage": "pt-br"
+    },
+    "jhipsterVersion": "6.3.1",
+    "applicationType": "monolith",
+    "baseName": "cdbem",
+    "packageName": "br.com.cdbem",
+    "packageFolder": "br/com/cdbem",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "caffeine",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "postgresql",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "NjNkYjNlMzFlOTdjNDRhNjA2NmExY2U2ODAzNDFlNWZjY2M4N2JmMzA3NTZkZDU0YzkwMzhhM2IxY2I2NzcyMWY0Zjk1NTdkYWI2NTkwYmM0ZGI1YjUyNjE1NjYyYTI5YzUwOTA4YzE2NGZlMDkzZmUwYmI4MDY1ZDQ3ZjE3M2M=",
+    "embeddableLaunchScript": false,
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "clientFramework": "angularX",
+    "clientTheme": "none",
+    "clientThemeVariant": "",
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": true,
+    "nativeLanguage": "pt-br",
+    "languages": [
+      "pt-br"
+    ],
+    "blueprints": []
+  }
+}
