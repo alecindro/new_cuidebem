@@ -44,9 +44,9 @@ spring:
       indent-output: true
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:postgresql://localhost:5432/cdbem
-    username: cdbem
-    password:
+    url: jdbc:postgresql://192.168.1.107:5432/cuidebemapp?currentSchema=cdbemtest
+    username: postgres
+    password: banana2018!
     hikari:
       poolName: Hikari
       auto-commit: false
@@ -60,6 +60,7 @@ spring:
       hibernate.cache.use_second_level_cache: true
       hibernate.cache.use_query_cache: false
       hibernate.generate_statistics: false
+    open-in-view: false
   liquibase:
     # Remove 'faker' if you do not want the sample data to be loaded automatically
     contexts: dev, faker

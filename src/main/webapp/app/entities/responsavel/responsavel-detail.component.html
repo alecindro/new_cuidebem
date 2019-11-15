@@ -1,0 +1,83 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="responsavel">
+            <h2><span jhiTranslate="cdbemApp.responsavel.detail.title">Responsavel</span> {{responsavel.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="cdbemApp.responsavel.nome">Nome</span></dt>
+                <dd>
+                    <span>{{responsavel.nome}}</span>
+                </dd>
+                <dt><span jhiTranslate="cdbemApp.responsavel.sobrenome">Sobrenome</span></dt>
+                <dd>
+                    <span>{{responsavel.sobrenome}}</span>
+                </dd>
+                <dt><span jhiTranslate="cdbemApp.responsavel.email">Email</span></dt>
+                <dd>
+                    <span>{{responsavel.email}}</span>
+                </dd>
+                <dt><span jhiTranslate="cdbemApp.responsavel.enabled">Enabled</span></dt>
+                <dd>
+                    <span>{{responsavel.enabled}}</span>
+                </dd>
+                <dt><span jhiTranslate="cdbemApp.responsavel.dataNascimento">Data Nascimento</span></dt>
+                <dd>
+                    <span>{{responsavel.dataNascimento}}</span>
+                </dd>
+                <dt><span jhiTranslate="cdbemApp.responsavel.vinculo">Vinculo</span></dt>
+                <dd>
+                    <span jhiTranslate="{{'cdbemApp.Vinculo.' + responsavel.vinculo}}">{{responsavel.vinculo}}</span>
+                </dd>
+                <dt><span jhiTranslate="cdbemApp.responsavel.cpf">Cpf</span></dt>
+                <dd>
+                    <span>{{responsavel.cpf}}</span>
+                </dd>
+                <dt><span jhiTranslate="cdbemApp.responsavel.rg">Rg</span></dt>
+                <dd>
+                    <span>{{responsavel.rg}}</span>
+                </dd>
+                <dt><span jhiTranslate="cdbemApp.responsavel.endereco">Endereco</span></dt>
+                <dd>
+                    <span>{{responsavel.endereco}}</span>
+                </dd>
+                <dt><span jhiTranslate="cdbemApp.responsavel.cidade">Cidade</span></dt>
+                <dd>
+                    <span>{{responsavel.cidade}}</span>
+                </dd>
+                <dt><span jhiTranslate="cdbemApp.responsavel.genero">Genero</span></dt>
+                <dd>
+                    <span jhiTranslate="{{'cdbemApp.Genero.' + responsavel.genero}}">{{responsavel.genero}}</span>
+                </dd>
+                <dt><span jhiTranslate="cdbemApp.responsavel.cep">Cep</span></dt>
+                <dd>
+                    <span>{{responsavel.cep}}</span>
+                </dd>
+                <dt><span jhiTranslate="cdbemApp.responsavel.photo">Photo</span></dt>
+                <dd>
+                    <span>{{responsavel.photo}}</span>
+                </dd>
+                <dt><span jhiTranslate="cdbemApp.responsavel.obs">Obs</span></dt>
+                <dd>
+                    <span>{{responsavel.obs}}</span>
+                </dd>
+                <dt><span jhiTranslate="cdbemApp.responsavel.telefones">Telefones</span></dt>
+                <dd>
+                    <span>{{responsavel.telefones}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/responsavel', responsavel.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

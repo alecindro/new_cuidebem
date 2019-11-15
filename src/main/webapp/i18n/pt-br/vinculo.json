@@ -1,0 +1,11 @@
+{
+  "cdbemApp": {
+    "Vinculo": {
+      "null": "",
+      "FILHO": "FILHO",
+      "CONJUGE": "CONJUGE",
+      "AMIGO": "AMIGO",
+      "OUTRO": "OUTRO"
+    }
+  }
+}

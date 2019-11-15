@@ -1,0 +1,32 @@
+{
+  "cdbemApp": {
+    "paciente": {
+      "home": {
+        "title": "Pacientes",
+        "createLabel": "Criar novo Paciente",
+        "createOrEditLabel": "Criar ou editar Paciente",
+        "notFound": "Nenhum Paciente encontrado"
+      },
+      "created": "Um novo Paciente foi criado com o identificador {{ param }}",
+      "updated": "Um Paciente foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Paciente foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Paciente {{ id }}?"
+      },
+      "detail": {
+        "title": "Paciente"
+      },
+      "nome": "Nome",
+      "apelido": "Apelido",
+      "genero": "Genero",
+      "enabled": "Enabled",
+      "dataNascimento": "Data Nascimento",
+      "tipoEstadia": "Tipo Estadia",
+      "photo": "Photo",
+      "patologias": "Patologias",
+      "dataCadastro": "Data Cadastro",
+      "checkin": "Checkin",
+      "responsavel": "Responsavel"
+    }
+  }
+}

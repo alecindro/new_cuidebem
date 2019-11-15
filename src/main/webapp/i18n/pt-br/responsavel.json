@@ -1,0 +1,36 @@
+{
+  "cdbemApp": {
+    "responsavel": {
+      "home": {
+        "title": "Responsavels",
+        "createLabel": "Criar novo Responsavel",
+        "createOrEditLabel": "Criar ou editar Responsavel",
+        "notFound": "Nenhum Responsavel encontrado"
+      },
+      "created": "Um novo Responsavel foi criado com o identificador {{ param }}",
+      "updated": "Um Responsavel foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Responsavel foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Responsavel {{ id }}?"
+      },
+      "detail": {
+        "title": "Responsavel"
+      },
+      "nome": "Nome",
+      "sobrenome": "Sobrenome",
+      "email": "Email",
+      "enabled": "Enabled",
+      "dataNascimento": "Data Nascimento",
+      "vinculo": "Vinculo",
+      "cpf": "Cpf",
+      "rg": "Rg",
+      "endereco": "Endereco",
+      "cidade": "Cidade",
+      "genero": "Genero",
+      "cep": "Cep",
+      "photo": "Photo",
+      "obs": "Obs",
+      "telefones": "Telefones"
+    }
+  }
+}

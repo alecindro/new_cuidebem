@@ -1,0 +1,104 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-paciente-heading" jhiTranslate="cdbemApp.paciente.home.createOrEditLabel">Create or edit a Paciente</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!editForm.get('id').value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="cdbemApp.paciente.nome" for="field_nome">Nome</label>
+                    <input type="text" class="form-control" name="nome" id="field_nome"
+                           formControlName="nome"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="cdbemApp.paciente.apelido" for="field_apelido">Apelido</label>
+                    <input type="text" class="form-control" name="apelido" id="field_apelido"
+                           formControlName="apelido"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="cdbemApp.paciente.genero" for="field_genero">Genero</label>
+                    <select class="form-control" name="genero" formControlName="genero" id="field_genero">
+                        <option value="MASCULINO">{{'cdbemApp.Genero.MASCULINO' | translate}}</option>
+                        <option value="FEMININO">{{'cdbemApp.Genero.FEMININO' | translate}}</option>
+                    </select>
+                    <div *ngIf="editForm.get('genero').invalid && (editForm.get('genero').dirty || editForm.get('genero').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('genero').errors.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="cdbemApp.paciente.enabled" for="field_enabled">Enabled</label>
+                    <input type="checkbox" class="form-control" name="enabled" id="field_enabled"
+                           formControlName="enabled"/>
+                    <div *ngIf="editForm.get('enabled').invalid && (editForm.get('enabled').dirty || editForm.get('enabled').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('enabled').errors.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="cdbemApp.paciente.dataNascimento" for="field_dataNascimento">Data Nascimento</label>
+                    <div class="input-group">
+                        <input id="field_dataNascimento" type="text" class="form-control" name="dataNascimento" ngbDatepicker  #dataNascimentoDp="ngbDatepicker" formControlName="dataNascimento"/>
+                        <span class="input-group-append">
+                            <button type="button" class="btn btn-secondary" (click)="dataNascimentoDp.toggle()"><fa-icon [icon]="'calendar-alt'"></fa-icon></button>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="cdbemApp.paciente.tipoEstadia" for="field_tipoEstadia">Tipo Estadia</label>
+                    <select class="form-control" name="tipoEstadia" formControlName="tipoEstadia" id="field_tipoEstadia">
+                        <option value="PERIODICO">{{'cdbemApp.TipoEstadia.PERIODICO' | translate}}</option>
+                        <option value="RESIDENTE">{{'cdbemApp.TipoEstadia.RESIDENTE' | translate}}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="cdbemApp.paciente.photo" for="field_photo">Photo</label>
+                    <input type="text" class="form-control" name="photo" id="field_photo"
+                           formControlName="photo"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="cdbemApp.paciente.patologias" for="field_patologias">Patologias</label>
+                    <input type="text" class="form-control" name="patologias" id="field_patologias"
+                           formControlName="patologias"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="cdbemApp.paciente.dataCadastro" for="field_dataCadastro">Data Cadastro</label>
+                    <div class="input-group">
+                        <input id="field_dataCadastro" type="text" class="form-control" name="dataCadastro" ngbDatepicker  #dataCadastroDp="ngbDatepicker" formControlName="dataCadastro"/>
+                        <span class="input-group-append">
+                            <button type="button" class="btn btn-secondary" (click)="dataCadastroDp.toggle()"><fa-icon [icon]="'calendar-alt'"></fa-icon></button>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="cdbemApp.paciente.checkin" for="field_checkin">Checkin</label>
+                    <input type="checkbox" class="form-control" name="checkin" id="field_checkin"
+                           formControlName="checkin"/>
+                    <div *ngIf="editForm.get('checkin').invalid && (editForm.get('checkin').dirty || editForm.get('checkin').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('checkin').errors.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

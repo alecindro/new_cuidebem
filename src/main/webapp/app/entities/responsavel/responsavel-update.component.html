@@ -1,0 +1,115 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-responsavel-heading" jhiTranslate="cdbemApp.responsavel.home.createOrEditLabel">Create or edit a Responsavel</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!editForm.get('id').value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="cdbemApp.responsavel.nome" for="field_nome">Nome</label>
+                    <input type="text" class="form-control" name="nome" id="field_nome"
+                           formControlName="nome"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="cdbemApp.responsavel.sobrenome" for="field_sobrenome">Sobrenome</label>
+                    <input type="text" class="form-control" name="sobrenome" id="field_sobrenome"
+                           formControlName="sobrenome"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="cdbemApp.responsavel.email" for="field_email">Email</label>
+                    <input type="text" class="form-control" name="email" id="field_email"
+                           formControlName="email"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="cdbemApp.responsavel.enabled" for="field_enabled">Enabled</label>
+                    <input type="checkbox" class="form-control" name="enabled" id="field_enabled"
+                           formControlName="enabled"/>
+                    <div *ngIf="editForm.get('enabled').invalid && (editForm.get('enabled').dirty || editForm.get('enabled').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('enabled').errors.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="cdbemApp.responsavel.dataNascimento" for="field_dataNascimento">Data Nascimento</label>
+                    <div class="input-group">
+                        <input id="field_dataNascimento" type="text" class="form-control" name="dataNascimento" ngbDatepicker  #dataNascimentoDp="ngbDatepicker" formControlName="dataNascimento"/>
+                        <span class="input-group-append">
+                            <button type="button" class="btn btn-secondary" (click)="dataNascimentoDp.toggle()"><fa-icon [icon]="'calendar-alt'"></fa-icon></button>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="cdbemApp.responsavel.vinculo" for="field_vinculo">Vinculo</label>
+                    <select class="form-control" name="vinculo" formControlName="vinculo" id="field_vinculo">
+                        <option value="FILHO">{{'cdbemApp.Vinculo.FILHO' | translate}}</option>
+                        <option value="CONJUGE">{{'cdbemApp.Vinculo.CONJUGE' | translate}}</option>
+                        <option value="AMIGO">{{'cdbemApp.Vinculo.AMIGO' | translate}}</option>
+                        <option value="OUTRO">{{'cdbemApp.Vinculo.OUTRO' | translate}}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="cdbemApp.responsavel.cpf" for="field_cpf">Cpf</label>
+                    <input type="text" class="form-control" name="cpf" id="field_cpf"
+                           formControlName="cpf"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="cdbemApp.responsavel.rg" for="field_rg">Rg</label>
+                    <input type="text" class="form-control" name="rg" id="field_rg"
+                           formControlName="rg"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="cdbemApp.responsavel.endereco" for="field_endereco">Endereco</label>
+                    <input type="text" class="form-control" name="endereco" id="field_endereco"
+                           formControlName="endereco"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="cdbemApp.responsavel.cidade" for="field_cidade">Cidade</label>
+                    <input type="text" class="form-control" name="cidade" id="field_cidade"
+                           formControlName="cidade"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="cdbemApp.responsavel.genero" for="field_genero">Genero</label>
+                    <select class="form-control" name="genero" formControlName="genero" id="field_genero">
+                        <option value="MASCULINO">{{'cdbemApp.Genero.MASCULINO' | translate}}</option>
+                        <option value="FEMININO">{{'cdbemApp.Genero.FEMININO' | translate}}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="cdbemApp.responsavel.cep" for="field_cep">Cep</label>
+                    <input type="text" class="form-control" name="cep" id="field_cep"
+                           formControlName="cep"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="cdbemApp.responsavel.photo" for="field_photo">Photo</label>
+                    <input type="text" class="form-control" name="photo" id="field_photo"
+                           formControlName="photo"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="cdbemApp.responsavel.obs" for="field_obs">Obs</label>
+                    <input type="text" class="form-control" name="obs" id="field_obs"
+                           formControlName="obs"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="cdbemApp.responsavel.telefones" for="field_telefones">Telefones</label>
+                    <input type="text" class="form-control" name="telefones" id="field_telefones"
+                           formControlName="telefones"/>
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

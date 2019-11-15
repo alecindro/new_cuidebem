@@ -1,0 +1,23 @@
+{
+  "cdbemApp": {
+    "references": {
+      "home": {
+        "title": "References",
+        "createLabel": "Criar novo References",
+        "createOrEditLabel": "Criar ou editar References",
+        "notFound": "Nenhum References encontrado"
+      },
+      "created": "Um novo References foi criado com o identificador {{ param }}",
+      "updated": "Um References foi atualizado com o identificador {{ param }}",
+      "deleted": "Um References foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir References {{ id }}?"
+      },
+      "detail": {
+        "title": "References"
+      },
+      "tipo": "Tipo",
+      "value": "Value"
+    }
+  }
+}

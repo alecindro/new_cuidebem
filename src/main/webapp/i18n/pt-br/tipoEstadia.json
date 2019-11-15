@@ -1,0 +1,9 @@
+{
+  "cdbemApp": {
+    "TipoEstadia": {
+      "null": "",
+      "PERIODICO": "PERIODICO",
+      "RESIDENTE": "RESIDENTE"
+    }
+  }
+}

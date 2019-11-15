@@ -1,0 +1,63 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="paciente">
+            <h2><span jhiTranslate="cdbemApp.paciente.detail.title">Paciente</span> {{paciente.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="cdbemApp.paciente.nome">Nome</span></dt>
+                <dd>
+                    <span>{{paciente.nome}}</span>
+                </dd>
+                <dt><span jhiTranslate="cdbemApp.paciente.apelido">Apelido</span></dt>
+                <dd>
+                    <span>{{paciente.apelido}}</span>
+                </dd>
+                <dt><span jhiTranslate="cdbemApp.paciente.genero">Genero</span></dt>
+                <dd>
+                    <span jhiTranslate="{{'cdbemApp.Genero.' + paciente.genero}}">{{paciente.genero}}</span>
+                </dd>
+                <dt><span jhiTranslate="cdbemApp.paciente.enabled">Enabled</span></dt>
+                <dd>
+                    <span>{{paciente.enabled}}</span>
+                </dd>
+                <dt><span jhiTranslate="cdbemApp.paciente.dataNascimento">Data Nascimento</span></dt>
+                <dd>
+                    <span>{{paciente.dataNascimento}}</span>
+                </dd>
+                <dt><span jhiTranslate="cdbemApp.paciente.tipoEstadia">Tipo Estadia</span></dt>
+                <dd>
+                    <span jhiTranslate="{{'cdbemApp.TipoEstadia.' + paciente.tipoEstadia}}">{{paciente.tipoEstadia}}</span>
+                </dd>
+                <dt><span jhiTranslate="cdbemApp.paciente.photo">Photo</span></dt>
+                <dd>
+                    <span>{{paciente.photo}}</span>
+                </dd>
+                <dt><span jhiTranslate="cdbemApp.paciente.patologias">Patologias</span></dt>
+                <dd>
+                    <span>{{paciente.patologias}}</span>
+                </dd>
+                <dt><span jhiTranslate="cdbemApp.paciente.dataCadastro">Data Cadastro</span></dt>
+                <dd>
+                    <span>{{paciente.dataCadastro}}</span>
+                </dd>
+                <dt><span jhiTranslate="cdbemApp.paciente.checkin">Checkin</span></dt>
+                <dd>
+                    <span>{{paciente.checkin}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/paciente', paciente.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>
